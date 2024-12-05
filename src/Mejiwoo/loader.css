@@ -1,0 +1,30 @@
+.dot-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Ensures it covers the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Places it above other content */
+}
+
+.dot-spinner__dot {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #fff; /* White dots */
+  border-radius: 50%;
+  animation: dot-spin 1.2s infinite ease-in-out;
+}
+
+@keyframes dot-spin {
+  0%, 80%, 100% {
+      transform: scale(0);
+  }
+  40% {
+      transform: scale(1);
+  }
+}
